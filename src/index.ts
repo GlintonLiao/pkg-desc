@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import _debug from 'debug'
-import pkg from '../package.json'
+import { readPackage } from 'read-pkg'
 const util = require('node:util')
 const exec = util.promisify(require('node:child_process').exec)
 
@@ -22,6 +22,7 @@ async function queryNpm(name: string, queryStr: string) {
 
 export async function getPkgInfo(options: Options = {}) {
   const infoList: any[] = []
+  const pkg = await readPackage()
   const queryStr = `${options.version ? 'version' : ''} ${options.description ? 'description' : ''} ${options.docs ? 'homepage' : ''}`.trim()
 
   if (queryStr.length === 0)
