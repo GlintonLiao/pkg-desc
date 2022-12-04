@@ -2,7 +2,9 @@
   "name": "pkg-desc",
   "version": "1.0.0",
   "description": "List detail of all npm packages",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prepublishOnly": "npm run build",
     "watch": "npm run build -- --watch",
