@@ -1,15 +1,13 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import _debug from 'debug'
-const readPackage = require('read-pkg')
 const util = require('node:util')
+const readPackage = require('read-pkg')
 const exec = util.promisify(require('node:child_process').exec)
-
-const debug = _debug('pkg-desc:index')
 
 export interface Options {
   version?: boolean
   description?: boolean
   docs?: boolean
+  author?: boolean
 }
 
 async function queryNpm(name: string, queryStr: string) {
@@ -23,7 +21,7 @@ async function queryNpm(name: string, queryStr: string) {
 export async function getPkgInfo(options: Options = {}) {
   const infoList: any[] = []
   const pkg = await readPackage()
-  const queryStr = `${options.version ? 'version' : ''} ${options.description ? 'description' : ''} ${options.docs ? 'homepage' : ''}`.trim()
+  const queryStr = `${options.version ? 'version' : ''} ${options.description ? 'description' : ''} ${options.docs ? 'homepage' : ''} ${options.author ? 'author' : ''}`.trim()
 
   if (queryStr.length === 0)
     return infoList

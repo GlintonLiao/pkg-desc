@@ -1,20 +1,43 @@
-# pkg-desc
-List detail of all npm packages
+<h1 align="center">pkg-desc</h1>
 
-## index.ts
 
-+ read package.json
+<p align="center">
+List all packages details
+</p>
+<p align="center">
+<a href="https://www.npmjs.com/package/pkg-desc"><img src="https://img.shields.io/npm/v/pkg-desc?color=a1b858&label=" alt="NPM version"></a>
+</p>
 
-+ query the info 
+## Usage
 
-+ return the pkg list
+```bash
+npx pkg-desc
+```
 
-## cli.ts
+or
 
-+ Setting options
+```bash
+npm i -g pkg-desc
+pkg-desc --version --author
+```
 
-+ parse() for args
+And you can get:
 
-+ run getPkgList()
+![example img](https://user-images.githubusercontent.com/37015336/205476655-57b883b3-135c-4ecd-b046-4e881b201d4d.jpg)
 
-+ show the result
+## Options
+
+```
+Options:
+  -v, --version     Show version (default: false)
+  -a, --author      Show author (default: false)
+  --no-description  Do not show description (default: true)
+  --no-docs         Do not show docs (default: true)
+  -h, --help        Display this message 
+```
+
+If any of the conditions fail, a `process.exit(1)` will be returned and prevent you from continuing the following workflows.
+
+## License
+
+MIT

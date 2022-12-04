@@ -1,6 +1,6 @@
 {
   "name": "pkg-desc",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "List detail of all npm packages",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -14,8 +14,9 @@
     "lint": "eslint \"{src,test}/**/*.ts\"",
     "lint:fix": "npm run lint -- --fix"
   },
-  "keywords": [],
+  "keywords": ["npm", "package", "description"],
   "author": "Glinton Liao",
+  "homepage": "https://github.com/glintonliao/pkg-desc#readme",
   "files": [
     "dist",
     "bin"

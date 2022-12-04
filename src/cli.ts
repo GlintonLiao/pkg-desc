@@ -5,9 +5,11 @@ import { getPkgInfo } from './index'
 const cli = cac('pkg-desc')
 
 cli
-  .option('--no-version', 'Do not show version')
+  .option('-v, --version', 'Show version', { default: false })
+  .option('-a, --author', 'Show Author', { default: false })
   .option('--no-description', 'Do not show description')
   .option('--no-docs', 'Do not show docs')
+  .help()
 
 const parsed = cli.parse()
 
