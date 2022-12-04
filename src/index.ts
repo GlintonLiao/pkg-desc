@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import _debug from 'debug'
-import { readPackage } from 'read-pkg'
+const readPackage = require('read-pkg')
 const util = require('node:util')
 const exec = util.promisify(require('node:child_process').exec)
 

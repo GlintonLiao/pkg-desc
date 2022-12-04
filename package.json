@@ -28,7 +28,7 @@
     "cac": "^6.7.14",
     "chalk": "^4.1.2",
     "debug": "^4.3.4",
-    "read-pkg": "^7.1.0"
+    "read-pkg": "^5.2.0"
   },
   "devDependencies": {
     "@glintonliao/eslint-config": "0.0.1",
